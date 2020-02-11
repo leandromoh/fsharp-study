@@ -1,0 +1,16 @@
+let even x = x % 2 = 0 
+let checkSumIsEven a b = even (a + b)
+
+// since all functions in F# have really one parameter (curried function), function types are pretty straight
+// the type before the symbol -> is the single parameter type, and the type after -> is the return type
+// that is, the type of the even variable (which is a function) is: int -> bool
+
+// checkSumIsEven function, which recevei two int parameters, has type int -> int -> bool
+// the -> symbol is right associative, what means that
+// int -> int -> bool is exactly the same as (int -> (int -> bool))
+
+// therefore checkSumIsEven is in fact a function that receveis an int, 
+// then return another function that also receveis an int and returns a bool
+
+// it makes function signature simple because we can read the last type as the return type
+// and the previous as parameters type, even if indeed everything is curried

@@ -1,0 +1,14 @@
+// Single-case discriminated unions are often used to create type-safe abstractions with pattern matching support:
+
+// Define union type
+type OrderId = OrderId of int
+
+// Create a discriminated union value
+let orderId = Order 12
+
+// Use pattern matching to deconstruct single-case DU
+let (Order id) = orderId
+
+// Deconstruct in the param
+let printOrderId (OrderId orderId) =
+   printfn "The orderId is %i" orderId

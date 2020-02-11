@@ -1,0 +1,8 @@
+//The parenthesis are optional (both sides)
+
+let (a, b) = (1, 2)
+
+let c, d = 3, 4
+
+printfn "%A %A" a b // 1 2
+printfn "%A %A" c d // 3 4

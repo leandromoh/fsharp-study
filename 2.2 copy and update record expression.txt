@@ -1,0 +1,5 @@
+// Another form of record construction can be useful when want to change some of the field values of an existing record. 
+// This form of the record expression is called the copy and update record expression.
+
+let myRecord  = { Point.X = 1.0; Y = 1.0; Z = 0.0; }
+let myRecord2 = { myRecord with Y = 100; Z = 2 }

@@ -1,0 +1,6 @@
+https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/
+https://www.fincher.org/tips/Languages/fsharp.shtml
+
+
+
+https://www.jdoodle.com/compile-fsharp-online/
