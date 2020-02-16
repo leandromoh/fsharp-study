@@ -2,10 +2,10 @@ let even x = x % 2 = 0
 let checkSumIsEven a b = even (a + b)
 
 // since all functions in F# have really one parameter (curried function), function types are pretty straight
-// the type before the symbol -> is the single parameter type, and the type after -> is the return type
-// that is, the type of the even variable (which is a function) is: int -> bool
+// the type before the symbol -> is the type of its single parameter, and the type after -> is the return type
+// that is, the type of the function even above is: int -> bool
 
-// checkSumIsEven function, which recevei two int parameters, has type int -> int -> bool
+// checkSumIsEven function, which receive two int parameters and returns a bool, has type int -> int -> bool
 // the -> symbol is right associative, what means that
 // int -> int -> bool is exactly the same as (int -> (int -> bool))
 

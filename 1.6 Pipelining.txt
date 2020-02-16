@@ -25,3 +25,5 @@ let z = sum 3 <| sum 4 6  // 13
 // instead of
 
 let z = sum 3 (sum 4 6)  // 13
+
+note: sadly, <| operator is left associativity

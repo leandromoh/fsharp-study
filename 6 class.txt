@@ -19,4 +19,4 @@ new CustomerName (1, "oi") |> (fun x -> printfn "%A %A" x.FirstName x.MiddleInit
 
 
 
-Private fields and functions using “let” bindings
+Private fields and functions using 'let' bindings

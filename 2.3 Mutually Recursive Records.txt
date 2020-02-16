@@ -1,4 +1,5 @@
-Defining mutually recursive records is done with the and keyword. This lets you link 2 or more record types together.
+// Defining mutually recursive records is done with the and keyword. 
+// This lets you link 2 or more record types together.
 
 // Create a Person type and use the Address type that is not defined
 type Person =

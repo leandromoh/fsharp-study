@@ -5,9 +5,9 @@
 type Point   = { X: float; Y: float; Z: float }
 type Point3D = { X: float; Y: float; Z: float }
 
-let myRecord3D = {       X = 1.0; Y = 1.0; Z = 0.0; }
-let myRecord   = { Point.X = 1.0; Y = 1.0; Z = 0.0; }
+let myPoint3D = {       X = 1.0; Y = 1.0; Z = 0.0; }
+let myPoint   = { Point.X = 1.0; Y = 1.0; Z = 0.0; }
 
 // or
 
-let myRecord = { Point.X = 1.0; Point.Y = 1.0; Point.Z = 0.0; }
+let myPoint = { Point.X = 1.0; Point.Y = 1.0; Point.Z = 0.0; }

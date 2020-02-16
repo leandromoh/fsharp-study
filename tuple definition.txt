@@ -1,8 +1,20 @@
-//The parenthesis are optional (both sides)
+// t1 has type int*int
 
-let (a, b) = (1, 2)
+let t1 = (2,3) 
 
-let c, d = 3, 4
+//explicit type of tuple variable
 
-printfn "%A %A" a b // 1 2
-printfn "%A %A" c d // 3 4
+let t2 : int * string = (2, "hello")
+
+// it's the comma you need, not the parentheses
+
+let y = 1, 2
+
+// create arbitrary tuples as needed
+
+let z = 1, true, "hello", 3.14   // "construct"
+let z1, z2, z3, z4 = z           // "deconstruct"
+
+// if you don't need some of the values, you can use the "don't care" symbol (the underscore) as a placeholder
+
+let _,z5,_,z6 = z     // ignore 1st and 3rd elements
