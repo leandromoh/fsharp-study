@@ -1,0 +1,13 @@
+Private fields and functions use 'let' bindings
+
+Properties are members that represent values associated with an object
+
+Properties can be members of classes, structures, discriminated unions, records, interfaces, and type extensions and can also be defined in object expressions
+
+By default, properties are public
+
+To apply same accessibility for both get and set accessors, add it immediately before the name of the property
+
+To apply different accessibility for each accessor, add it before the get and set keywords
+
+For static properties, omit the self-identifier and add the static keyword before the member keyword

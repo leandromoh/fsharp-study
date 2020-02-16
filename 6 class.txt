@@ -1,22 +1,20 @@
-// classes always have parentheses after the class name (the primary constructor)
-// the primary constructor is embedded into the class declaration itself, not a separate method
-// constructor parameters automatically become immutable private fields
-// constructor parameters type definition are optional if the compiler can use type inference from usage
-// if you ever need to pass a tuple as a parameter to a constructor, you will have to annotate it explicitly
-// both properties and methods use the member keyword
-// every non-static member must have a self-identifier. No requirement to use a particular word (e.g., this, self, me, x)
+// Class definition
+
+type [type-access-modifier] type-name [type-generic-params] [primary-constructor-access-modifier] ( parameter-list ) [ as self-identifier ] =
+[ class ]
+[ inherit base-type-name(base-constructor-args) ]
+[ let-bindings ]
+[ do-bindings ]
+member-list
+[ end ]
+
+// both access modifiers above are public by default
+// every non-static member must have a self-identifier
+// no requirement to use a particular word for self-identifier (e.g., this, self, me)
+// you can create objects by using a new expression, with or without the optional new keyword
 
 type CustomerName(firstName: int, middleInitial: string) = 
-    member this.FirstName = firstName
-    member this.MiddleInitial = middleInitial
+    member x.FirstName = firstName
+    member x.MiddleInitial = middleInitial
 
 new CustomerName (1, "oi") |> (fun x -> printfn "%A %A" x.FirstName x.MiddleInitial)
-
-
-// Constructor signatures are always called new keyword
-// Constructor signatures always take tuple values as their only parameter
-
-
-
-
-Private fields and functions using 'let' bindings
