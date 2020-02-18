@@ -1,0 +1,10 @@
+Members are features that are part of a type definition and are declared with the member keyword
+F# object types such as records, classes, discriminated unions, interfaces, and structures support members
+They are public unless otherwise specified
+
+Members are
+- Properties
+- Methods 
+- Events
+
+https://stackoverflow.com/questions/24840948/when-should-i-use-let-member-val-and-member-this

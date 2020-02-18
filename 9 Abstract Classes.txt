@@ -1,0 +1,11 @@
+// Abstract classes are classes that leave some or all members unimplemented, so that implementations can be provided by derived classes.
+
+[<AbstractClass>]
+type [ accessibility-modifier ] abstract-class-name =
+[ inherit base-class-or-interface-name ]
+[ abstract-member-declarations-and-member-definitions ]
+
+// Abstract member syntax.
+abstract member member-name : type-signature
+
+no instances can be created of abstract class.
