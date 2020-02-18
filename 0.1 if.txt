@@ -1,0 +1,17 @@
+if...then...else is an expression, not a statement
+Thus, each branch of the if expression must produce a value
+
+if expr then
+   expr
+
+elif expr then
+   expr
+
+else
+   expr
+
+
+let sign num =
+   if num > 0 then "positive"
+   elif num < 0 then "negative"
+   else "zero"
