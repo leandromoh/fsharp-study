@@ -26,4 +26,18 @@ let z = sum 3 <| sum 4 6  // 13
 
 let z = sum 3 (sum 4 6)  // 13
 
-note: sadly, <| operator is left associativity
+note: sadly, <| operator is left associativity what means that 
+
+let x = sum 3 <| sum 4 <| sum 5 5
+
+give us an error, because it evaluates to 
+
+let x = (((sum 3) sum 4) sum 5 5)
+
+instead of 
+
+let x = (sum 3 (sum 4 (sum 5 5)))
+
+so an alternative way is write
+
+let x = sum 3 << sum 4 <| sum 5 5

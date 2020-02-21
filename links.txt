@@ -4,3 +4,13 @@ https://www.fincher.org/tips/Languages/fsharp.shtml
 
 
 https://www.jdoodle.com/compile-fsharp-online/
+
+=======================
+
+http://www.fssnip.net/mj/title/Different-styles-of-pattern-matching
+
+https://en.wikibooks.org/wiki/F_Sharp_Programming
+
+https://7sharp9.dev/2015/07/12/2015-07-08-meta-matic/
+https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/generics/statically-resolved-type-parameters
+https://7sharp9.dev/2019/04/24/2019-04-24-applied-metaprogramming-with-myriad/
