@@ -12,7 +12,7 @@ while test-expression do
 
 
   for i = 1 to 10 do
-    printfn "%d " i
+    printfn "%d" i
 
   for i in [ 1; 5; 100; 450; 788 ] do
     printfn "%d" i

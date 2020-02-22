@@ -1,2 +1,6 @@
+Pattern matching is used for binding values to expressions with let, and in function parameters, and for branching using the match..with syntax.
+
+Pattern matching allows you to "compare data with a logical structure or structures, decompose data into constituent parts, or extract information from data in various ways".
+
 https://www.tutorialspoint.com/fsharp/fsharp_pattern_matching.htm
 https://fsharpforfunandprofit.com/posts/match-expression/
