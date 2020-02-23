@@ -1,8 +1,8 @@
 
 match [something] with 
-| pattern1 -> expression1
-| pattern2 -> expression2
-| pattern3 -> expression3
+| pattern1 [ when condition ] -> result-expression1
+| pattern2 [ when condition ] -> result-expression2
+| pattern3 [ when condition ] -> result-expression3
 
 // order patterns are defined is important! They are tested in a top-down way
 // if the pattern is the wildcard _, it will always match. Usually it is used as default case (last position)

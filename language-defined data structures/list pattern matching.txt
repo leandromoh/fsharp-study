@@ -1,0 +1,8 @@
+let oneToEleven =  [ 1..11 ]
+
+let rec sum list = 
+    match list with 
+    | [] -> 0
+    | head::tail -> head + sum tail
+
+printfn "%A" <| sum oneToEleven // 6
