@@ -1,0 +1,7 @@
+immutable data structures F# includes 
+
+lists
+options
+tuples, 
+FSharp.Collections.Map<'Key,'Value>
+FSharp.Collections.Set<'Key>

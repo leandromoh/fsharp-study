@@ -1,0 +1,19 @@
+System.Collections.Generic.SortedList<'Key,'Value>: A collection of sorted
+values. Searches are done by a binary search. The underlying data structure is a
+single array.
+
+System.Collections.Generic.SortedDictionary<'Key,'Value>: A collection of
+key/value pairs sorted by the key, rather than hashed. Searches are done by a binary
+search. The underlying data structure is a single array.
+
+System.Collections.Generic.Stack<'T>: A variable-sized last-in/first-out (LIFO)
+collection.
+
+System.Collections.Generic.Queue<'T>: A variable-sized first-in/first-out (FIFO)
+collection.
+
+System.Text.StringBuilder: A mutable structure for building string values.
+
+FSharp.Collections.HashSet<'Key>: A hash table structure holding only keys
+and no values. Since .NET 3.5, a HashSet<'T> type is available in the System.
+Collections.Generic namespace.

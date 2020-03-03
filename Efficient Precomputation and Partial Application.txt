@@ -1,0 +1,27 @@
+let isWordEfficient (words : string list) =
+ printfn "lazy computation x"
+ let wordTable = Set.ofList words
+ fun word -> wordTable.Contains(word)
+ 
+let isWordInefficient (words : string list) word =
+ printfn "lazy computation y"
+ let wordTable = Set.ofList words
+ wordTable.Contains(word)
+ 
+
+let cities = ["London"; "Paris"; "Warsaw"; "Tokyo"]
+let isCapitalEfficient = isWordEfficient cities
+
+printfn "%b" <| isCapitalEfficient "Paris"
+printfn "%b" <| isCapitalEfficient "Rio de Janeiro"
+
+printfn "%b" <| isWordEfficient cities "Paris"
+printfn "%b" <| isWordEfficient cities "Rio de Janeiro"
+
+let isCapitalInefficient = isWordInefficient cities
+
+printfn "%b" <| isCapitalInefficient "Paris"
+printfn "%b" <| isCapitalInefficient "Rio de Janeiro"
+
+printfn "%b" <| isWordInefficient cities "Paris"
+printfn "%b" <| isWordInefficient cities "Rio de Janeiro"

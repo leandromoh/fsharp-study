@@ -2,6 +2,9 @@ Members are features that are part of a type definition and are declared with th
 F# object types such as records, classes, discriminated unions, interfaces, and structures support members
 They are public unless otherwise specified
 
+Members referenced by prefixing a type name are called static members
+Members associated with a particular instance of a type are called instance members;
+
 Members are
 - Properties
 - Methods 

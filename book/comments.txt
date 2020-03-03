@@ -1,0 +1,2 @@
+Comments are either lines starting with // or blocks enclosed by(* and *). 
+Comment lines beginning with three slashes (///) are XMLDoc comments and can, if necessary, include extra XML tags and markup. 

@@ -1,3 +1,5 @@
+// F# directly supports N-dimensional array values that are stored flat—that.
+// Types for 2 dimensions values are written such as in int[,] and these types also support slicing syntax.
 // Arrays are mutable, fixed-sized and zero-based sequences of the same data type.
 
 let AOlympians = [| "Aphrodite"; "Apollo"; "Ares"; "Artemis"; "Athena" |];; // string []
@@ -21,3 +23,5 @@ let FiveToOne = [|5..-1..1|];; // [|5; 4; 3; 2; 1|]
 AOlympians.[1..2] //  [| "Apollo"; "Ares" |]
 AOlympians.[..2]  //  [| "Aphrodite"; "Apollo"; "Ares" |]
 AOlympians.[3..]  //  [| "Artemis"; "Athena" |]
+
+let arr = [|for i in 0 .. 5 -> (i, i * i)|];; // [|(0, 0); (1, 1); (2, 4); (3, 9); (4, 16); (5, 25)|]

@@ -14,7 +14,7 @@ while test-expression do
   for i = 1 to 10 do
     printfn "%d" i
 
-  for i in [ 1; 5; 100; 450; 788 ] do
+  for i in 1..2..10 do
     printfn "%d" i
 
   let mutable i = 0
