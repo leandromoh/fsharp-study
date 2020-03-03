@@ -14,3 +14,8 @@ https://en.wikibooks.org/wiki/F_Sharp_Programming
 https://7sharp9.dev/2015/07/12/2015-07-08-meta-matic/
 https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/generics/statically-resolved-type-parameters
 https://7sharp9.dev/2019/04/24/2019-04-24-applied-metaprogramming-with-myriad/
+
+
+
+F# 4 expert 
+http://2.238.16.249:8880/get/pdf/128
