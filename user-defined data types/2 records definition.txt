@@ -1,5 +1,6 @@
 // Records represent simple aggregates of named values, optionally with members. 
 // They can either be structs or reference types. They are reference types by default.
+// Compiler automatically generates structural equality and structural comparison for records
 
 // Labels are separated by semicolons when defined on the same line.
 type Point = { X: float; Y: float; Z: float; }
