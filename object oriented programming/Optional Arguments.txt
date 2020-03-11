@@ -1,0 +1,18 @@
+You declare a member argument optional by prefixing the argument name with ?. Within a function
+implementation, an optional argument always has an option<_> type; for example, an optional argument of type int appears as a value of type option<int> within the function body. 
+
+Optional arguments must always appear last in the set of arguments accepted by a method
+
+open System.Drawing
+
+type LabelInfo(?text : string, ?font : Font) =
+ let text = defaultArg text ""
+ let font = match font with
+| None -> new Font(FontFamily.GenericSansSerif, 12.0f)
+| Some v -> v
+ member x.Text = text
+ member x.Font = font
+ /// Define a static method that creates an instance
+ static member Create(?text, ?font) = new LabelInfo(?text=text, ?font=font)
+
+// val defaultArg : 'T option -> 'T-> 'T

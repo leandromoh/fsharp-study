@@ -1,0 +1,10 @@
+Every time you use operators such as <, >, <=, >=, =, <>, compare, min, and max in F# code, you’re using generic comparison. All of these operators are located in the FSharp.Core.Operators module, which is opened by default in all F# code
+
+val compare : 'T -> 'T -> int when 'T : comparison
+val (=) : 'T -> 'T -> bool when 'T : equality
+val (<) : 'T -> 'T -> bool when 'T : comparison
+val (<=) : 'T -> 'T -> bool when 'T : comparison
+val (>) : 'T -> 'T -> bool when 'T : comparison
+val (>=) : 'T -> 'T -> bool when 'T : comparison
+val (min) : 'T -> 'T -> 'T when 'T : comparison
+val (max) : 'T -> 'T -> 'T when 'T : comparison

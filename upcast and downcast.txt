@@ -1,0 +1,20 @@
+// upcast converts statically a value to any of its supertypes
+// downcast converts dynamically (checked at runtime) a value to any of its subtypes
+
+let objStr = "foo" :> obj
+let objInt = upcast 2 : obj
+
+let str = objStr :?> string
+let int = downcast objInt : int
+
+printfn "%s %d" str int // foo 2
+
+let reportObject (x : obj) =
+ match x with
+ | :? string -> printfn "The input is a string"
+ | :? int as d -> printfn "The input is the integer '%d'" d
+ | _ -> printfn "the input is something else"
+
+reportObject objStr
+reportObject int
+reportObject true

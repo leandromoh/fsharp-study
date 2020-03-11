@@ -1,0 +1,15 @@
+open System.Windows.Forms
+
+let form = new Form(Visible = true, TopMost = true, Text = "Welcome to F#")
+
+The constructor for the System.Windows.Forms.Form class takes no arguments, so in this case the
+named arguments indicate set operations for the given properties. The code is shorthand for this:
+
+open System.Windows.Forms
+
+let form =
+ let tmp = new Form()
+ tmp.Visible <- true
+ tmp.TopMost <- true
+ tmp.Text <- "Welcome to F#"
+ tmp

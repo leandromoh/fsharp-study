@@ -1,0 +1,20 @@
+F# lets you define both members associated with types and objects via the dot-notation and static
+functions that can perform essentially the same operations. For example, the length of a string s can
+be computed by both the s.Length property and the String.length function. Given the choice, which
+should you use in your code? Although there is no fixed answer to this, here are some general rules:
+
+• Use members (methods and properties) where they already exist, unless you have other
+good reasons not to do so. It’s better to use s.Length than String.length, simply
+because it’s shorter, even if it occasionally requires using an additional type annotation.
+That is, embrace dot-notation, even though it may require type annotations, but use it
+tastefully.
+
+• When designing a framework or library, define members for the intrinsic, essential
+properties and operations associated with a type.
+
+• When designing a framework or library, define additional functionality in new modules
+or by using extension members. The section “Extending Existing Types and Modules”
+later in this chapter covers extension members.
+
+
+Sometimes there is duplication in functionality between dot-notation members and values in associated modules. This is intended and should be accepted as part of the mixed OO/functional nature of F#

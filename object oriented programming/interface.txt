@@ -1,0 +1,34 @@
+// interfaces doesn’t have any constructors
+// This is how F# infers that it’s an object interface type.
+
+[ attributes ]
+type [accessibility-modifier] interface-name =
+    [ interface ]     [ inherit base-interface-name ...]
+    abstract member1 : [ argument-types1 -> ] return-type1
+    abstract member2 : [ argument-types2 -> ] return-type2
+    ...
+[ end ]
+
+open System.Drawing
+
+type IShape =
+    abstract Contains : Point -> bool
+    abstract BoundingBox : Rectangle
+
+type MutableCircle() =
+
+    member val Center = Point(x = 0, y = 0) with get, set
+    member val Radius = 10 with get, set
+    member c.Perimeter = 2.0 * System.Math.PI * float c.Radius
+
+    interface IShape with
+
+        member c.Contains(p : Point) =
+            let dx = float32 (p.X - c.Center.X)
+            let dy = float32 (p.Y - c.Center.Y)
+            sqrt(dx * dx + dy * dy) <= float32 c.Radius
+
+        member c.BoundingBox =
+            Rectangle(
+                c.Center.X - c.Radius, c.Center.Y - c.Radius,
+                2 * c.Radius + 1, 2 * c.Radius + 1)

@@ -1,0 +1,8 @@
+only function definitions and simple immutable data expressions are automatically generalized; 
+this is called the value restriction
+
+let emptyList = [] // 'a list
+
+printfn "%A" emptyList
+
+since list is empty, it can be of any type!
