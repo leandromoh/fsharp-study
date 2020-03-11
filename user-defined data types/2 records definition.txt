@@ -1,6 +1,14 @@
 // Records represent simple aggregates of named values, optionally with members. 
 // They can either be structs or reference types. They are reference types by default.
 // Compiler automatically generates structural equality and structural comparison for records
+// Record fields are automatically exposed as properties
+
+[ attributes ]
+type [accessibility-modifier] typename =
+    { [ mutable ] label1 : type1;
+      [ mutable ] label2 : type2;
+      ... }
+    [ member-list ]
 
 // Labels are separated by semicolons when defined on the same line.
 type Point = { X: float; Y: float; Z: float; }
