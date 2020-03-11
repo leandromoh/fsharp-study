@@ -1,0 +1,14 @@
+module NumberTheoryExtensions =
+    let factorize i =
+        let lim = int (sqrt (float i))
+        let rec check j =
+           if j > lim  then None
+           elif (i %  j) = 0 then Some (i / j, j)
+           else check (j + 1)
+        check 2
+
+    type System.Int32 with
+        member i.IsPrime = (factorize i).IsNone
+        member i.TryFactorize() = factorize i
+
+The IsPrime extension property and the TryFactorize extension method are then available for use in conjunction with int32 values whenever the NumberTheoryExtensions module has been opened.
