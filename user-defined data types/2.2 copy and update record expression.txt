@@ -1,5 +1,6 @@
 // Another form of record construction can be useful when want to change some of the field values of an existing record. 
 // This form of the record expression is called the copy and update record expression.
+// This expression form doesn’t mutate the values of a record, even if the fields of the original record are mutable.
 
 type Point3D = {X : float; Y : float; Z : float}
 
