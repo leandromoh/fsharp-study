@@ -1,0 +1,6 @@
+inline
+measureTime
+eventos
+f# type providers 
+F# computation expressions
+Asynchronous Computations

@@ -10,4 +10,4 @@ You can also give abstract methods default definitions by adding the definition 
 Regardless of whether a base class implements its abstract methods, derived classes can provide implementations of abstract methods
 
 To implement an abstract method in a derived class use override keyword
-To implement an abstract method in the same class as the original abstract declaration use defaut keyword
+To implement an abstract method in the same class as the original abstract declaration use default keyword

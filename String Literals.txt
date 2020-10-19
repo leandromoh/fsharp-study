@@ -1,0 +1,8 @@
+The F# type string is an abbreviation for the type System.String and represents a sequence of Unicode UTF-16 characters. 
+
+"Humpty Dumpty"     is a String
+"c:\\Program Files" is a String
+@"c:\Program Files" is a Verbatim string
+"""I "like" you"""  is a Triple quote string
+"xyZy3d2"B          is a Literal byte array
+'c'                 is a Character of type

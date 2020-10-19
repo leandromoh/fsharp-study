@@ -1,0 +1,12 @@
+type Region() =
+  let mutable t = 0.0f     // private field 
+
+  member val Width = 0.0f  // get only property with    field
+
+  member x.Height = 0.0f   // get only property without field
+
+  member val Left = 0.0f with get,set // auto implemented get set property 
+
+  member x.Top with get() = 0.0f and set(value) = t <- value // custom get set property 
+
+// https://stackoverflow.com/questions/24840948/when-should-i-use-let-member-val-and-member-this

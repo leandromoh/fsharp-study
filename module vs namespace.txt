@@ -1,0 +1,46 @@
+A namespace is a .Net thing, common in many industrial-strength languages, just a way to organize frameworks and avoid naming conflicts among different libraries. Both you and I can define a type "Foo" and use them both in a project, provided they are in different namespaces (e.g. NS1.Foo and NS2.Foo). Namespaces in .Net contain types.
+
+A module is an F# thing, it is roughly analogous to a "static class"... it is an entity that can hold let-bound values and functions, as well as types (note that namespaces cannot directly contain values/functions, namespaces can only contain types, which themselves can contain values and functions). Things inside a module can be referenced via "ModuleName.Thing", which is the same syntax as for namespaces, but modules in F# can also be 'opened' to allow for unqualified access, e.g.
+
+open ModuleName
+...
+Thing  // rather than ModuleName.Thing
+(EDIT: Namespaces can also similarly be opened, but the fact that modules can contain values and functions makes opening a module more 'interesting', in that you can wind up with values and functions, e.g. "cos", being names you can use directly, whereas in other .Net languages you'd typically always have to qualify it, e.g. "Math.cos").
+
+If you type in code at 'the top level' in F#, this code implicitly goes in a module.
+
+https://stackoverflow.com/questions/795172/what-the-difference-between-a-namespace-and-a-module-in-f
+
+A module is a simple container for values, type definitions, and submodules.
+
+When designing a library, it is usually better to place your code in a namespace, which can contain only
+types and modules. Think of this as a restricted form of module, because it is forbidden to use let bindings
+outside of module or type definitions
+
+Most significantly, namespaces are open, which means multiple source files and assemblies can contribute to the same namespace.
+
+Preventing Client Code from Opening a Module 
+
+Modules, however, are often designed in such a way that client code should not normally “open” the
+module, because doing so will create too many ambiguities among various function and value names.
+Allowing clients to open your modules may make client code more brittle as you add new functions to your
+modules. For this reason, you can add an attribute RequireQualifiedAccess, indicating that qualified
+access to the module or type is required:
+
+[<RequireQualifiedAccess>]
+module Vector2D =
+ let length v = sqrt(v.DX * v.DX + v.DY * v.DY)
+ let zero = {DX=0.0; DY=0.0}
+
+so you cannot open Vector2D module and use length or zero directly, but use a qualified acess like 
+Vector2D.length or Vector2D.zero
+
+Automatically Opening Modules
+
+Modules can be labeled AutoOpen, meaning they’re treated as opened whenever the enclosing namespace or
+module is opened. This can be useful when you’re defining ad hoc top-level operators and functions:
+namespace Acme.Compenents
+
+[<AutoOpen>]
+module private Utilities =
+ let swap (x,y) = (y,x)

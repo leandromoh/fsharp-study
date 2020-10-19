@@ -1,0 +1,17 @@
+// type tests
+
+let i = 3 :> obj // upcast 3 as object
+
+printf "%A" <| i :? int     // true
+printf "%A" <| i :? string  // false
+
+
+let reportObject (x : obj) =
+ match x with
+ | :? string -> printfn "The input is a string"
+ | :? int as d -> printfn "The input is the integer '%d'" d
+ | _ -> printfn "the input is something else"
+
+reportObject "hello"
+reportObject i
+reportObject true

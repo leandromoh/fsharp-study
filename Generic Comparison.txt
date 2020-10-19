@@ -8,3 +8,17 @@ val (>) : 'T -> 'T -> bool when 'T : comparison
 val (>=) : 'T -> 'T -> bool when 'T : comparison
 val (min) : 'T -> 'T -> 'T when 'T : comparison
 val (max) : 'T -> 'T -> 'T when 'T : comparison
+
+- The equality constraint is satisfied if the type definition doesn’t have the
+NoEquality attribute, and any dependencies also satisfy the equality constraint.
+- The comparison constraint is satisfied if the type definition doesn’t have the
+NoComparison attribute, the type definition implements System.IComparable, and
+any dependencies also satisfy the comparison constraint.
+
+These attributes control the comparison and equality semantics of type definitions:
+• StructuralEquality and StructuralComparison: Indicate that a structural type
+must support equality and comparison
+• NoComparison and NoEquality: Indicate that a type doesn’t support equality or
+comparison
+• CustomEquality and CustomComparison: Indicate that a structural type supports
+custom equality and comparison
