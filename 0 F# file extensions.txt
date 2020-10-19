@@ -1,0 +1,8 @@
+.fsx is for individual files intended to run as a script. In particular, in an .fsx file you can use things like #r "Foo.dll" to dynamically load a library and #load "Foo.fsx" to load another script file.
+
+.fs is for source files compiled as part of a project.
+
+.fsi is for signature files, they are optional and describe the API of a corresponding .fs file. 
+
+https://docs.microsoft.com/pt-br/dotnet/fsharp/language-reference/signature-files
+https://fsharpforfunandprofit.com/installing-and-using/
