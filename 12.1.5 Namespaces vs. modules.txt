@@ -1,0 +1,6 @@
+Because modules can be opened, you might think that they’re a complete replacement
+for namespaces, but they’re not. Unlike namespaces, a module can’t span multiple files.
+Nor can you create a module that has the same fully qualified name as a namespace in
+another file. For this reason, you should still use namespaces as in C#, to logically group
+types and modules. Use modules primarily to store functions, and secondly to store
+types that are tightly related to those functions. 
