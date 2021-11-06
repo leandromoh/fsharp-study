@@ -1,0 +1,5 @@
+Classes and overloaded methods
+Second, in F#, overloaded functions aren’t allowed. You can create (or reference from C#
+libraries) classes that contain methods that are overloaded, but functions declared using
+the let syntax can't be overloaded. For this reason, type inference doesn't completely
+function on classes and methods.
