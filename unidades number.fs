@@ -5,6 +5,6 @@ printfn "digite um numero: "
 let valor = "1234" // Console.ReadLine()
 
 let mutable i = 0
-while i <= valor.Length do
-    printfn $"{pesos[i]} = {valor[valor.Length - i - 1]}"
+while i < valor.Length do
+    printfn $"{valor[i]} = {pesos[valor.Length - i - 1]}"
     i <- i + 1
