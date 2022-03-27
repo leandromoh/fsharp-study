@@ -2,7 +2,6 @@
 https://www.geeksforgeeks.org/maximum-difference-between-two-elements/
 Maximum difference between two elements such that larger element appears after the smaller number
 Difficulty Level : Medium
-
 Given a list of integers, find out the maximum difference between any two elements such that larger element appears after the smaller number.
 *)
 
@@ -23,6 +22,9 @@ let calc = maxDiff >> printfn "%d" >> ignore
 
 List.empty     |> calc // -1
 [8]            |> calc // -1
+[1; 8]         |> calc //  7
+[8; 1]         |> calc // -1
+
 [7; 1; 5; 4 ]  |> calc //  4
 [9; 4; 3; 2 ]  |> calc // -1
 [1; 5 ; 2; 10] |> calc //  9
