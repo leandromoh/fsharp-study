@@ -3,7 +3,7 @@ https://www.geeksforgeeks.org/maximum-difference-between-two-elements/
 Maximum difference between two elements such that larger element appears after the smaller number
 Difficulty Level : Medium
 
-Given an list of integers, find out the maximum difference between any two elements such that larger element appears after the smaller number.
+Given a list of integers, find out the maximum difference between any two elements such that larger element appears after the smaller number.
 *)
 
 open System
